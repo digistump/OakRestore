@@ -4,7 +4,7 @@
 
  **Requires a 3.3V (NOT 5V) USB to Uart Adapter - we recommend the CH340/CH340G type.**
 
- - Install python or ensure it is in your path
+ - Install python or ensure it is in your path (or use the esptool.exe in this repo if on windows)
  - Download this repo and unzip to a folder
  - Open a command prompt in the folder
  - Connect your USB to Uart adapter to the Oak. Connect Pin3/RX to TX and Pin4/TX to RX, GND to GND.
