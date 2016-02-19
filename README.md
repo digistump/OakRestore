@@ -20,3 +20,5 @@ You may need to install pyserial on some platforms.
 python esptool.py --baud 115200 --port YOUR_COM_PORT write_flash -fs 32m 0x1000 blank.bin 0x2000 oaksetup_restore.bin 0x0081000 oakupdate_restore.bin 0x101000 blank.bin 0x102000 blank.bin 0x202000 blank.bin 
 ```
 **This will not restore an Oak that has had its Particle Config overwritten** at 0x100000 and 0x201000 - a device where that has occured can be partially restored by this method but then will need its device id set via serial, and you'll need to have recorded it previously. Then connect at 115200 baud and send set\n40\n{"device-id":"123456789012345678901234"}\n where 123456789012345678901234 is replaced by your device-id. You can also send a raw POST to 192.168.0.1/set with the same JSON while connected to the AP of the Oak
+
+To get your device-id : access the Oak url http://192.168.0.1/device-id while connected to its AP.
