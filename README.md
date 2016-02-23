@@ -13,7 +13,7 @@
  - If you get any errors check your connections or try another platform.
  - After restoring, unclaim the Oak if you previously added it to the Particle Cloud - at build.particle.io
  - Re-run the intial setup procedure with the config app
- - **To get debugging output during the update** open a serial terminal to the port at 115200 bps (Arduino Serial Monitor works for this) and then proceed with config and update. If the update fails, copy the serial update and paste it here for us to analyze: https://github.com/digistump/OakCore/issues/47
+ - **To get debugging output during the update** open a serial terminal to the port at 115200 bps (Arduino Serial Monitor works for this) and then proceed with config and update. If the update fails, copy the serial output and paste it here for us to analyze: https://github.com/digistump/OakCore/issues/47
 
 You may need to install pyserial on some platforms.
 
