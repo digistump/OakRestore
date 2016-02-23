@@ -22,3 +22,16 @@ python esptool.py --baud 115200 --port YOUR_COM_PORT write_flash -fs 32m 0x1000 
 **This will not restore an Oak that has had its Particle Config overwritten** at 0x100000 and 0x201000 - a device where that has occured can be partially restored by this method but then will need its device id set via serial, and you'll need to have recorded it previously. Then connect at 115200 baud and send set\n40\n{"device-id":"123456789012345678901234"}\n where 123456789012345678901234 is replaced by your device-id. You can also send a raw POST to 192.168.0.1/set with the same JSON while connected to the AP of the Oak
 
 To get your device-id : access the Oak url http://192.168.0.1/device-id while connected to its AP.
+
+## Force update an Oak
+
+**To force an Oak to use the latest system version without using the OTA Update: **
+
+**(PLEASE DO NOT do this without first trying the above and providing us with the debugging output - that output is essential to us making this work for everyone.)**
+
+Download this file into the same folder as you have copied this repository (ignore the SSL warning, this was intended for device use only): https://oakota.digistump.com/firmware/firmware_v1.bin
+
+Then run:
+```
+python esptool.py --baud 115200 --port YOUR_COM_PORT write_flash -fs 32m 0x1000 blank.bin 0x2000 firmware_v1.bin 0x101000 blank.bin 0x102000 blank.bin 0x202000 blank.bin 
+```
