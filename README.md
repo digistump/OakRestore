@@ -9,9 +9,9 @@
  - Open a command prompt in the folder
  - Connect your USB to Uart adapter to the Oak. Connect Pin3/RX to TX and Pin4/TX to RX, GND to GND.
  - Connect Pin2 to GND on the Oak and power it up via a good stable power supply or good USB port.
- - Run the following command, replacing YOUR_COM_PORT with the com port of your uart to usb adapter. It should be in the form COMx where 'x' is the number of your COM port. For example... COM6. You can get the number from the Arduino IDE if you are unsure.
+ - Run the following command, replacing YOUR_COM_PORT with the com port of your uart to usb adapter. It should be in the form COMx where 'x' is the number of your COM port (i.e. COM6). You can get the number from the Arduino IDE if you are unsure (listed under Tools -> Port). 
  - If you get any errors check your connections or try another platform.
- - Once the OakRestore firmware has finished writing (i.e. there haven't been any errors, and esptool has given you the 'Leaving...' message, remove the connection between P2 and GND, and power cycle your Oak. 
+ - Once the OakRestore firmware has finished writing ( there haven't been any errors, and esptool has given you the 'Leaving...' message), remove the connection between P2 and GND, and power cycle your Oak. 
  - After restoring, unclaim the Oak if you previously added it to the Particle Cloud - at build.particle.io
  - Re-run the intial setup procedure with the config app
  - **To get debugging output during the update** open a serial terminal to the port at 115200 bps (Arduino Serial Monitor works for this) and then proceed with config and update. If the update fails, copy the serial output and paste it here for us to analyze: https://github.com/digistump/OakCore/issues/47 (**NOTE:** If you downloaded this repository previously, you'll need to re-download it as the bin files have changed to add debugging)
